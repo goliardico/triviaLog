@@ -1,0 +1,24 @@
+{
+  "name": "triviaLog",
+  "version": "1.0.0",
+  "description": "Build on top of console.log, TriviaLog don't use any external dependencies trying to be the smallest as possible.",
+  "main": "triviaLog.js",
+  "scripts": {
+    "test": "echo \"Not now, but I'll do it.\" && exit 1"
+  },
+  "author": "goliardico",
+  "keywords": [
+    "logging",
+    "sysadmin",
+    "tools"
+  ],
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "licenses": [
+  	{
+      "type": "MIT",
+      "url": ""
+    }
+  ]
+}
