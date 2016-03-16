@@ -1,5 +1,5 @@
 {
-  "name": "triviaLog",
+  "name": "trivialog",
   "version": "1.0.0",
   "description": "Build on top of console.log, TriviaLog don't use any external dependencies trying to be the smallest as possible.",
   "main": "triviaLog.js",

@@ -4,7 +4,7 @@
 // create (optionally) a web server who send last "n" log entries
 
 'use strict';
-var triviaLog = {};
+var trivialog = {};
 
 const util = require('util');
 const fs   = require('fs');
@@ -55,7 +55,7 @@ function formatDate() {
 }
 
 
-triviaLog.log = function() {
+trivialog.log = function() {
 	let logLevel = 'INFO';
 	let msg = '';
 	let msgObj = '';
@@ -89,7 +89,7 @@ triviaLog.log = function() {
 }
 
 // Set logParams (with parameter name)
-triviaLog.setParam = function(param, value) {
+trivialog.setParam = function(param, value) {
 
 	const err = 'Something wrong with .setParam: ' + param;
 
@@ -113,9 +113,9 @@ triviaLog.setParam = function(param, value) {
 }
 
 // Show Parameter value
-triviaLog.getParam = function(param) {
+trivialog.getParam = function(param) {
 	if (typeof param === 'string' && logParams.has(param))
 		return logParams.get(param);
 }
 
-module['exports'] = triviaLog;
+module['exports'] = trivialog;

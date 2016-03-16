@@ -7,7 +7,7 @@ Build on top of console.log, TriviaLog don't use any external dependencies tryin
 After installation, include the library and print some messages:
 
 ```javascript
-tl = require('triviaLog');
+tl = require('trivialog');
 
 // Set log limit to WARN (don't print everthing above)
 tl.setParam('limit', 'WARN');
@@ -34,7 +34,7 @@ Install as regular npm module:
 
 ```sh
 
-npm install triviaLog
+npm install trivialog
 
 ```
 
