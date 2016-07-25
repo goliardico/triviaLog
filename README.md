@@ -28,8 +28,6 @@ I made this just to test and experiment with npm module creation, but it's works
 
 ## Installation
 
-TODO: I don't have already publish to npm...
-
 Install as regular npm module:
 
 ```sh
@@ -53,7 +51,7 @@ List of available parameters:
 ````javascript
 logLevels.set('EMER',    0);
 logLevels.set('ALERT',   1);
-logLevels.set('CRIT'    ,2);
+logLevels.set('CRIT',    2);
 logLevels.set('ERR',     3);
 logLevels.set('WARN',    4);
 logLevels.set('NOTICE',  5);

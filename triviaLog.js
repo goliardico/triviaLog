@@ -1,3 +1,4 @@
+/*eslint-env es6*/
 // Minimum dependency (or even zero) logger facility.
 // TODO:
 // define external destination (file, network) DONE (file)
@@ -29,7 +30,7 @@ const logLevels = new Map();
 
 logLevels.set('EMER',    0);
 logLevels.set('ALERT',   1);
-logLevels.set('CRIT'    ,2);
+logLevels.set('CRIT',    2);
 logLevels.set('ERR',     3);
 logLevels.set('WARN',    4);
 logLevels.set('NOTICE',  5);
@@ -45,7 +46,12 @@ logParams.set('outFile', null);
 logParams.set('outNet', null);
 
 
-// ---
+
+/**
+ * Return a beautifully formatted date
+ * 
+ * @returns {String} - 
+ */
 function formatDate() {
 	let d = new Date();
 	return d.getFullYear() + '-' + ('0' + (d.getMonth()+1)).slice(-2) + '-'
@@ -55,6 +61,9 @@ function formatDate() {
 }
 
 
+/**
+ * Main function, write logs
+ */
 trivialog.log = function() {
 	let logLevel = 'INFO';
 	let msg = '';
@@ -88,7 +97,12 @@ trivialog.log = function() {
 	}
 }
 
-// Set logParams (with parameter name)
+/**
+ * Set logParams (with parameter name)
+ * 
+ * @param {String} param - to be modified
+ * @param {String} value - to be set
+ */
 trivialog.setParam = function(param, value) {
 
 	const err = 'Something wrong with .setParam: ' + param;
@@ -112,7 +126,12 @@ trivialog.setParam = function(param, value) {
 
 }
 
-// Show Parameter value
+/**
+ * Show Parameter value
+ * 
+ * @param {String} param - to get
+ * @returns
+ */
 trivialog.getParam = function(param) {
 	if (typeof param === 'string' && logParams.has(param))
 		return logParams.get(param);
