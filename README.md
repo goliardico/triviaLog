@@ -13,6 +13,11 @@ tl = require('trivialog');
 tl.setParam('limit', 'WARN');
 
 tl.log('ALERT', 'This will be printed to console.');
+tl.setParam('outScreen', false);
+tl.log('ERR', 'This will NOT be printed to console.', fileName, Obj1);
+tl.setParam('outScreen', true);
+
+
 tl.log('DEBUG', 'This will NOT be shown to console because DEBUG level is above ALERT.');
 
 // Print also to a log file
@@ -43,9 +48,12 @@ Use .setParam to modify default parameter or set output file.
 Use .getParam to read value of param.
 
 List of available parameters:
-* limit: set log limit (use next table reference)
-* outFile: set an output file
-* outNet: set a network destination, UDP (TODO)
+* limit: (string) set log limit (use next table reference)
+* outFile: (string) set an output file
+* outScreen: (boolean) enable or disable screen output
+* outNet: (Ip adress) set a network destination, UDP
+* outPort: (integer) set a network destination port, UDP (Default to 4321)
+* hostname: (string) set name of local server. This's for identify source logs when received over the network. 
 
 ### LogLevels
 ````javascript
